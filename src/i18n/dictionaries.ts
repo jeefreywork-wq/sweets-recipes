@@ -1,7 +1,7 @@
 export const dictionaries = {
   en: {
     home: {
-      title: "SWEETS RECIPES",
+      title: "HANA SWEET",
       heroTitle: "Authentic Sweets for Every Occasion",
       heroDesc: "Explore hand-picked recipes from traditional cakes to healthy treats",
       filterCategories: "Categories",
@@ -34,7 +34,7 @@ export const dictionaries = {
   },
   ar: {
     home: {
-      title: "وصفات حلويات",
+      title: "حلويات هنا",
       heroTitle: "حلويات أصيلة لكل المناسبات",
       heroDesc: "اكتشف وصفات مختارة بعناية من الكيك التقليدي إلى الحلويات الصحية",
       filterCategories: "التصنيفات",
