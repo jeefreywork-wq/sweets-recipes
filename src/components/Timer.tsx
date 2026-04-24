@@ -9,9 +9,7 @@ export function Timer({ duration, label }: { duration: number; label: string }) 
 
   useEffect(() => {
     if (!running || timeLeft <= 0) return;
-    const interval = setInterval(() => {
-      setTimeLeft(prev => prev - 1);
-    }, 1000);
+    const interval = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
     return () => clearInterval(interval);
   }, [running, timeLeft]);
 
@@ -24,14 +22,16 @@ export function Timer({ duration, label }: { duration: number; label: string }) 
   const secs = (timeLeft % 60).toString().padStart(2, "0");
 
   return (
-    <button 
+    <button
       onClick={toggle}
-      className={`mt-4 btn-brutal flex items-center gap-4 text-2xl w-full md:w-auto ${
-        running ? "bg-accent-orange text-white" : "bg-accent-mint text-black"
+      className={`mt-4 flex items-center gap-3 px-5 py-3 rounded-full text-sm font-semibold transition-all shadow-sm ${
+        running
+          ? "bg-orange-50 text-orange-400 border border-orange-200"
+          : "bg-sky-50 text-sky-500 border border-sky-200"
       }`}
     >
-      {running ? <Square strokeWidth={4} /> : <Play strokeWidth={4} />}
-      <span className="font-mono font-black">{mins}:{secs}</span>
+      {running ? <Square size={16} /> : <Play size={16} />}
+      <span className="font-mono font-bold text-base">{mins}:{secs}</span>
       <span>{label}</span>
     </button>
   );

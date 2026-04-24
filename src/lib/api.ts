@@ -18,10 +18,10 @@ export interface Recipe {
   title: { en: string; ar: string };
   image?: string;
   category: string;
-  ingredients?: Ingredient[];
-  instructions?: Instruction[];
   createdAt?: string;
   updatedAt?: string;
+  ingredients?: Ingredient[];
+  instructions?: Instruction[];
 }
 
 export async function getRecipes(): Promise<Recipe[]> {
