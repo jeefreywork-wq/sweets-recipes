@@ -47,7 +47,7 @@ export default async function RecipePage({ params }: { params: Promise<{ lang: s
         ) : (
           <div className="w-full h-full bg-gray-100"></div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
         <div className="absolute bottom-6 left-6 right-6">
           <h1
             style={{ fontFamily: "'Playfair Display', serif" }}
